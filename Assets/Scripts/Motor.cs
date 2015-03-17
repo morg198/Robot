@@ -5,6 +5,7 @@ public class Motor : MonoBehaviour {
 
 
 	public float powerLevel;
+	public int rotation;
 	// Use this for initialization
 	void Start () {
 	
@@ -20,6 +21,9 @@ public class Motor : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-
+		if (rotation > 90)
+			rotation = 90;
+		if (rotation < -90)
+			rotation = -90;
 	}
 }
